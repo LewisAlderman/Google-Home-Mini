@@ -4,4 +4,85 @@
  * Description: Child theme of twenty-seventeen customised for Home Mini product site
  * Template: twentyseventeen
  */
+
+ /* TABLE OF CONTENTS */
+ /**
+  * [01] Navigation
+  * [02] Header
+  * [03] Content
+  * 
+  */
  
+
+/************* [01] Navigation ***************/
+
+.nav-to-top {
+    top: 0;
+}
+
+.navigation-top {
+    top: 0;
+    bottom: unset;
+}
+
+.center-div{
+    transform: translateY(-50%);
+}
+
+.main-navigation > div > ul {
+    float: right;
+}
+
+nav ul li {
+    letter-spacing: 0.05em;
+}
+
+nav ul li:last-child a{
+    background: mediumslateblue;
+    color: white;
+    border-radius: 5em;
+}
+
+nav ul li:last-child a:hover {
+    color: white;
+    background: royalblue;
+}
+
+/************* [02] Header ***************/
+
+.site-title {
+    font-size: 5em;
+    text-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+
+.site-description {
+    font-size: 1.2em;
+}
+
+.twentyseventeen-front-page.has-header-image .site-branding,
+	.twentyseventeen-front-page.has-header-video .site-branding,
+	.home.blog.has-header-image .site-branding,
+	.home.blog.has-header-video .site-branding {
+		margin-bottom: unset;
+	}
+
+.site-branding {
+    top: 65%;
+    /* top: unset; */
+}
+
+.site-branding-text {
+    position: absolute;
+    bottom: 50%;
+}
+
+.has-header-image .custom-header-media img,
+.has-header-video .custom-header-media video,
+.has-header-video .custom-header-media iframe {
+    position: relative;
+    /* object-fit: cover; */
+    object-position: 100% 50%;
+}
+
+/************* [03] Content ***************/
+
