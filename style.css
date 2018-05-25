@@ -87,6 +87,24 @@ nav ul li:last-child a:hover {
 /************* [03] Content ***************/
 
 .panel-content {
-    background: #ccc url(images/bedside.jpg) no-repeat center 75%;
+    background: #ccc url(images/bedside.jpg) no-repeat 75% 75%;
     background-size: cover;
+    position: relative;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.panel-content::after {
+    position: absolute;
+    content: '';
+    top:0;bottom:0;left:0;right:0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 33%, rgba(255,255,255,0) 75%);
+}
+
+.panel-content .entry-title,
+.panel-content .entry-content {
+    z-index: 10;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
