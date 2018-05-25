@@ -26,39 +26,59 @@
 
 	<div class="panel-content">
 		<div class="wrap">
-			<header class="entry-header">
-				<?php // the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+			<div class="entry-wrapper">
+				<header class="entry-header">
+					<?php // the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+	
+					<?php
+	
+						if ( get_field('section_header') ) { ?>
+	
+						<h2 class='entry-header'><?php the_field('section_header') ?></h2>
+						
+	
+					<?php } ?>
 
-				<?php
+					<?php
+	
+						if ( get_field('section_header-2') ) { ?>
 
-					if ( get_field('section_header') ) { ?>
+							<h2 class='entry-header'><?php the_field('section_header-2') ?></h2>
+						
 
-					<h2><?php the_field('section_header') ?></h2>
+					<?php } ?>
+					
+					<?php twentyseventeen_edit_link( get_the_ID() ); ?>
+	
+				</header><!-- .entry-header -->
+	
+				<div class="entry-content">
+	
+					<?php
+	
+						if ( get_field('section_text') ) { ?>
+	
+						<p class='entry-content'><?php the_field('section_text') ?></p>
+	
+					<?php } ?>
 
-				<?php } ?>
-				
-				<?php twentyseventeen_edit_link( get_the_ID() ); ?>
+					<?php
+	
+						if ( get_field('section_text-2') ) { ?>
 
-			</header><!-- .entry-header -->
+						<p class='entry-content'><?php the_field('section_text-2') ?></p>
 
-			<div class="entry-content">
-
-				<?php
-
-					if ( get_field('section_text') ) { ?>
-
-					<h2><?php the_field('section_text') ?></h2>
-
-				<?php } ?>
-
-				<?php
-					/* translators: %s: Name of current post */
-					the_content( sprintf(
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-						get_the_title()
-					) );
-				?>
-			</div><!-- .entry-content -->
+					<?php } ?>
+	
+					<?php
+						/* translators: %s: Name of current post */
+						the_content( sprintf(
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+							get_the_title()
+						) );
+					?>
+				</div><!-- .entry-content -->
+			</div>
 
 		</div><!-- .wrap -->
 	</div><!-- .panel-content -->

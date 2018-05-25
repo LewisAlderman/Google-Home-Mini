@@ -93,25 +93,54 @@ nav ul li:last-child a:hover {
 /************* [03] Content ***************/
 
 .panel-content {
-    background: #ccc url(images/bedside.jpg) no-repeat 75% 75%;
+    background: #eee;
     background-size: cover;
     position: relative;
     padding-top: 5em;
     padding-bottom: 5em;
+    overflow: auto;
 }
 
-.panel-content::after {
-    position: absolute;
-    content: '';
-    top:0;bottom:0;left:0;right:0;
-    z-index: -1;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 33%, rgba(255,255,255,0) 75%);
+.panel-content{
+    background: url(images/scene-white.jpg) center center no-repeat;
 }
 
-.panel-content .entry-title,
+#panel1 .panel-content{
+    background: url(images/scene-red.jpg) center center no-repeat;
+}
+
+#panel2 .panel-content{
+    background: url(images/scene-black.jpg) center center no-repeat;
+}
+
+.panel-content .entry-header,
+.panel-content .entry-header h2,
 .panel-content .entry-content {
     z-index: 10;
     color: white;
     text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    width: 100% !important;
+    
+    margin-bottom: 0 !important;
 }
 
+.panel-content .entry-header h2,
+.panel-content .entry-content h2 {
+    font-weight: bolder;
+}
+
+.panel-content .entry-content p {
+    line-height: 1.5;
+}
+
+.entry-wrapper {
+    width: 50%;
+}
+
+#panel1.entry-content {
+    float: right;
+}
+
+#panel2 .entry-content {
+    float: left;
+}
