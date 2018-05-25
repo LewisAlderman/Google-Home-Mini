@@ -86,3 +86,7 @@ nav ul li:last-child a:hover {
 
 /************* [03] Content ***************/
 
+.panel-content {
+    background: #ccc url(images/bedside.jpg) no-repeat center 75%;
+    background-size: cover;
+}
