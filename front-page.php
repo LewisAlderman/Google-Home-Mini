@@ -48,6 +48,16 @@ get_header(); ?>
 
 	endif; // The if ( 0 !== twentyseventeen_panel_count() ) ends here. ?>
 
+	<?php
+
+		if ( get_field('header_title') ) { ?>
+
+			<h2><?php the_field('header_title') ?></h2>
+
+		<?php } ?>
+
+	?>
+
 	</main><!-- #main -->
 </div><!-- #primary -->
 

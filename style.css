@@ -48,6 +48,12 @@ nav ul li:last-child a:hover {
     background: royalblue;
 }
 
+.navigation-top .current-menu-item > a,
+.navigation-top .current_page_item > a {
+    color: slateblue;
+    border-bottom: 2px solid black;
+}
+
 /************* [02] Header ***************/
 
 .site-title {
@@ -108,3 +114,4 @@ nav ul li:last-child a:hover {
     color: white;
     text-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
+
